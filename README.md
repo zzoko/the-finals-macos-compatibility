@@ -1,4 +1,6 @@
-# THE FINALS compatibility — 0.1.0-alpha2
+# THE FINALS compatibility
+
+Current packages: **NotProton Steam native 0.1.0-alpha3** and **CrossOver Steam bottle 0.1.0-alpha2**.
 
 Choose **one** ZIP matching your CrossOver version and how you launch Steam.
 
@@ -10,7 +12,7 @@ Choose **one** ZIP matching your CrossOver version and how you launch Steam.
 | CrossOver Preview 27.0.0.40734 — NotProton Steam native | Native macOS Steam with NotProton's runner for that exact Preview build. |
 
 **Requirements:** Apple Silicon, macOS 27.x, Rosetta, the matching CrossOver
-version, and a Steam copy of THE FINALS. The native Steam route also requires NotProton.
+version, and a Steam copy of THE FINALS. The native Steam route also requires NotProton 1.2.0.
 
 Extract the whole ZIP, open `Install.command`, and choose **Install / update**.
 
