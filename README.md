@@ -4,8 +4,8 @@ Choose one ZIP matching your CrossOver version and how you launch Steam.
 
 | Package | Version |
 | --- | --- |
-| CrossOver Preview 27.0.0.41073 — NotProton Steam native | 0.1.0-alpha6 |
-| CrossOver Preview 27.0.0.41073 — CrossOver Steam bottle | 0.1.0-alpha6 |
+| CrossOver Preview 27.0.0.41073 — NotProton Steam native | 0.1.0-alpha7 |
+| CrossOver Preview 27.0.0.41073 — CrossOver Steam bottle | 0.1.0-alpha7 |
 | CrossOver 26.3 — NotProton Steam native | 0.1.0-alpha6 |
 | CrossOver 26.3 — CrossOver Steam bottle | 0.1.0-alpha6 |
 
@@ -32,11 +32,17 @@ ZIP checksums are in `SHA256SUMS.txt`.
 
 ## Game specific information
 
-- **Ray tracing (CrossOver Preview):** turned off by default, because it currently fails on this Preview build. To test it anyway, add `D3DM_SUPPORT_DXR=1` before `%command%` in Steam's Launch Options (NotProton) — expect a crash if it is still unsupported.
-- **Freeze after long play:** if THE FINALS freezes after loading in (audio keeps playing) and then shows an "Unhandled page fault" popup, the D3DMetal shader cache has grown too large for the Apple GPU driver. The launcher now clears that cache automatically once after such a hang. You can also clear it yourself: quit the game, open `Install.command` and choose **5 Clear D3DMetal shader cache**, or run `rm -rf "$(getconf DARWIN_USER_CACHE_DIR)d3dm/Discovery.exe"`. It rebuilds by itself; expect some stutter for the first session or two.
+- **Ray tracing (CrossOver Preview):** no longer forced off. Select Dynamic GI in the game. The highest setting and correct arms were tested on M5 with Metal 4 enabled and a refreshed shader cache; availability depends on your Mac. Remove an existing `D3DM_SUPPORT_DXR=0` Launch Option to allow ray tracing.
+- **Shader-cache recovery:** for recurring graphics freezes or RTPSO/pipeline startup errors, quit the game and try **5 — Clear D3DMetal shader cache** in `Install.command`. It rebuilds automatically; expect shader-compilation stutter. This helped the tested setup, but the original ray-tracing crash cause is unconfirmed.
 
 <details>
 <summary><strong>Changelog</strong></summary>
+
+**0.1.0-alpha7 — Preview downloads (26 October 2026)**
+
+- Removed the forced ray-tracing-off default; D3DMetal detects support normally. Explicit user overrides remain available.
+- Highest Dynamic GI and correct arms confirmed in the Practice Range with Metal 4 enabled. The skin correction is unchanged.
+- Added shader-cache recovery guidance. CrossOver 26.3 downloads remain at alpha6.
 
 **0.1.0-alpha6 (October 2026)**
 
