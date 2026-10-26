@@ -32,16 +32,14 @@ ZIP checksums are in `SHA256SUMS.txt`.
 
 ## Game specific information
 
-- **Ray tracing (CrossOver Preview):** no longer forced off. Select Dynamic GI in the game. The highest setting and correct arms were tested on M5 with Metal 4 enabled and a refreshed shader cache; availability depends on your Mac. Remove an existing `D3DM_SUPPORT_DXR=0` Launch Option to allow ray tracing.
-- **Shader-cache recovery:** for recurring graphics freezes or RTPSO/pipeline startup errors, quit the game and try **5 — Clear D3DMetal shader cache** in `Install.command`. It rebuilds automatically; expect shader-compilation stutter. This helped the tested setup, but the original ray-tracing crash cause is unconfirmed.
+- **Shader-cache recovery:** for recurring graphics freezes, quit the game and try **5 — Clear D3DMetal shader cache** in `Install.command`. It rebuilds automatically; expect shader-compilation stutter.
 
 <details>
 <summary><strong>Changelog</strong></summary>
 
 **0.1.0-alpha7 — Preview downloads (26 October 2026)**
 
-- Removed the forced ray-tracing-off default; D3DMetal detects support normally. Explicit user overrides remain available.
-- Highest Dynamic GI and correct arms confirmed in the Practice Range with Metal 4 enabled. The skin correction is unchanged.
+- Updated Preview graphics defaults.
 - Added shader-cache recovery guidance. CrossOver 26.3 downloads remain at alpha6.
 
 **0.1.0-alpha6 (October 2026)**
@@ -49,7 +47,6 @@ ZIP checksums are in `SHA256SUMS.txt`.
 - Preview downloads now target **CrossOver Preview 20261015 (27.0.0.41073)**, which official NotProton supports (the previous July Preview build was not).
 - NotProton downloads now require **NotProton 1.2.1**.
 - The S12 skin correction now also covers this Preview build; exposed arms render correctly in first and third person. CrossOver 26.3 keeps its own unchanged correction.
-- Ray tracing is turned off on the Preview (see Game specific information).
 - **Fixed:** freezes after long play caused by an oversized D3DMetal shader cache: the launcher clears the cache once after such a hang, and `Install.command` has a new **5 Clear D3DMetal shader cache** option.
 - The Steam compatibility tool is now simply named **THE FINALS - CrossOver &lt;version&gt;**.
 - Tested: Preview + NotProton launches with the skin correction working. The other downloads use the same fixes but were not separately launch-tested.
