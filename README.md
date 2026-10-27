@@ -4,10 +4,10 @@ Choose one ZIP matching your CrossOver version and how you launch Steam.
 
 | Package | Version |
 | --- | --- |
-| CrossOver Preview 27.0.0.41073 — NotProton Steam native | 0.1.0-alpha7 |
-| CrossOver Preview 27.0.0.41073 — CrossOver Steam bottle | 0.1.0-alpha7 |
-| CrossOver 26.3 — NotProton Steam native | 0.1.0-alpha6 |
-| CrossOver 26.3 — CrossOver Steam bottle | 0.1.0-alpha6 |
+| CrossOver Preview 27.0.0.41073 — NotProton Steam native | 0.1.0-alpha8 |
+| CrossOver Preview 27.0.0.41073 — CrossOver Steam bottle | 0.1.0-alpha8 |
+| CrossOver 26.3 — NotProton Steam native | 0.1.0-alpha8 |
+| CrossOver 26.3 — CrossOver Steam bottle | 0.1.0-alpha8 |
 
 **Requirements:** Apple Silicon, macOS 27.x, Rosetta, the matching CrossOver
 version, and a Steam copy of THE FINALS. Native Steam also requires NotProton 1.2.1.
@@ -24,8 +24,9 @@ and game files. Verification and rollback are included. Each ZIP's `VALIDATION.m
 records what was tested for that route; results for one route do not certify the others.
 
 The skin correction is a separate internal component that can be retired independently
-when an upstream fix is verified. It applies only to matching converted shaders and
-preserves the game's normal visibility rules. No game shaders are included in the download.
+when an upstream fix is verified. It recognizes the affected curve by its structure and
+preserves the game's normal visibility rules. Unrecognized patterns remain unchanged.
+No game shaders are included, and users do not need Xcode, Python or a compiler.
 
 Source, licenses and rebuild instructions are included under `Support`.
 ZIP checksums are in `SHA256SUMS.txt`.
@@ -37,6 +38,12 @@ ZIP checksums are in `SHA256SUMS.txt`.
 <details>
 <summary><strong>Changelog</strong></summary>
 
+**0.1.0-alpha8 (27 October 2026)**
+
+- Replaced the M5-only shader-hash recipes with automatic structural detection, intended to recognize the same affected curve on other GPU families.
+- The same single installer includes the prebuilt component; no developer tools are required.
+- Local component and installer checks passed. Preview + NotProton also reached the menu with exposed skin confirmed visible on M5. M4 and older chips still need confirmation from users; unsupported shader layouts keep their original behavior.
+
 **0.1.0-alpha7 — Preview downloads (26 October 2026)**
 
 - Updated Preview graphics defaults.
@@ -46,7 +53,7 @@ ZIP checksums are in `SHA256SUMS.txt`.
 
 - Preview downloads now target **CrossOver Preview 20261015 (27.0.0.41073)**, which official NotProton supports (the previous July Preview build was not).
 - NotProton downloads now require **NotProton 1.2.1**.
-- The S12 skin correction now also covers this Preview build; exposed arms render correctly in first and third person. CrossOver 26.3 keeps its own unchanged correction.
+- The S12 skin correction covered this Preview build on the tested M5; exposed arms rendered correctly in first and third person. Those hash recipes did not cover the reported M4 Pro. CrossOver 26.3 keeps its own unchanged correction.
 - **Fixed:** freezes after long play caused by an oversized D3DMetal shader cache: the launcher clears the cache once after such a hang, and `Install.command` has a new **5 Clear D3DMetal shader cache** option.
 - The Steam compatibility tool is now simply named **THE FINALS - CrossOver &lt;version&gt;**.
 - Tested: Preview + NotProton launches with the skin correction working. The other downloads use the same fixes but were not separately launch-tested.
