@@ -4,6 +4,8 @@
 
 **YouTube setup video:** [Watch on YouTube](https://www.youtube.com/watch?v=5emn-mqPV5A) (The video covers ARC Raiders, but the installation method is the same.)
 
+<br><br>
+
 Choose one ZIP matching your CrossOver version and how you launch Steam.
 
 | Package | Version |
