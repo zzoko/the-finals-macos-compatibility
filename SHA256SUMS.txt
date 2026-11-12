@@ -1,4 +1,4 @@
-124bfc72d866bb3ef5533289f4078990dbbd76114669cfa0594a47141cd850d8  THE FINALS — CrossOver Preview 27.0.0.41073 — NotProton Steam native — 0.1.0-alpha11.zip
-40df5378d63bea28c3486c5c770bd7a999432e68dd313df126b21149f35f7d79  THE FINALS — CrossOver 26.3 — CrossOver Steam bottle — 0.1.0-alpha11.zip
-b75634364e88ee4ee7d110148b8e89bb93d793c201785f29cdac6285ea9d3dc8  THE FINALS — CrossOver Preview 27.0.0.41073 — CrossOver Steam bottle — 0.1.0-alpha11.zip
-d02543910e9757f0b4bd0830060435d17a52e0c31d8670484f8b4c625f700a82  THE FINALS — CrossOver 26.3 — NotProton Steam native — 0.1.0-alpha11.zip
+175084d432a81847433fbd5f737e2b9acdee2bf7de9692446871518cea57db3f  THE FINALS — CrossOver Preview 27.0.0.41303 — NotProton Steam native — 0.1.0-alpha12.3.zip
+885f731b9cf5a61b5133d67b3299d09d0bcf437c9a2aec9f589858c4f48d5c28  THE FINALS — CrossOver Preview 27.0.0.41303 — CrossOver Steam bottle — 0.1.0-alpha12.3.zip
+9cd01df673ac63ae5bfb3299183e083a37cda0c963079abd365b050656910a7f  THE FINALS — CrossOver 26.3 — CrossOver Steam bottle — 0.1.0-alpha12.3.zip
+c77a8fb73a4eb8e4a409fc74e09bc5e2cb148ca4a617b7aa24218d07a8f84aef  THE FINALS — CrossOver 26.3 — NotProton Steam native — 0.1.0-alpha12.3.zip

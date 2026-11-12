@@ -10,20 +10,20 @@ Choose one ZIP matching your CrossOver version and how you launch Steam.
 
 | Package | Version |
 | --- | --- |
-| CrossOver Preview 27.0.0.41073 — NotProton Steam native | 0.1.0-alpha11 |
-| CrossOver Preview 27.0.0.41073 — CrossOver Steam bottle | 0.1.0-alpha11 |
-| CrossOver 26.3 — NotProton Steam native | 0.1.0-alpha11 |
-| CrossOver 26.3 — CrossOver Steam bottle | 0.1.0-alpha11 |
+| CrossOver Preview 27.0.0.41303 — NotProton Steam native | 0.1.0-alpha12.3 |
+| CrossOver Preview 27.0.0.41303 — CrossOver Steam bottle | 0.1.0-alpha12.3 |
+| CrossOver 26.3 — NotProton Steam native | 0.1.0-alpha12.3 |
+| CrossOver 26.3 — CrossOver Steam bottle | 0.1.0-alpha12.3 |
 
 **Requirements:** Apple Silicon, macOS 27.x, Rosetta, the matching CrossOver
-version, and a Steam copy of THE FINALS. **macOS 27.2 is required to use the improved Wine performance optimization.** Native Steam also requires NotProton 1.2.3.
-For Preview, download `crossover-preview-20261015.zip` from CodeWeavers' Preview Center (not the `arm64` one).
+version, and a Steam copy of THE FINALS. **macOS 27.2 or 27.2.1 is required to use the improved Wine performance optimization.** Native Steam also requires NotProton 1.2.5.
+For Preview, download `crossover-preview-20261111.zip` from CodeWeavers' Preview Center (not the `arm64` one).
 
 Extract the whole ZIP, open `Install.command`, and choose **Install / update**.
 The CPU compatibility correction and S12 skin correction are included in that one installation.
 
 - **CrossOver Steam bottle:** launch **THE FINALS (Patched)** inside your selected bottle.
-- **NotProton Steam native:** restart Steam, select **THE FINALS - CrossOver 26.3** or **THE FINALS - CrossOver Preview 27.0.0.41073** as the compatibility tool, and click **Play**.
+- **NotProton Steam native:** restart Steam, select **THE FINALS - CrossOver 26.3** or **THE FINALS - CrossOver Preview 27.0.0.41303** as the compatibility tool, and click **Play**.
 
 The installer creates a private runtime and preserves your installed CrossOver app
 and game files. Verification and rollback are included.
@@ -42,6 +42,14 @@ ZIP checksums are in `SHA256SUMS.txt`.
 
 <details>
 <summary><strong>Changelog</strong></summary>
+
+**0.1.0-alpha12.3 (12 November 2026)**
+
+- Fixes initialization and shader-converter startup failures with CrossOver Preview 20261111.
+- Restores startup after the game update renamed its inner executables. CPU, memory/TLS and skin corrections now cover the updated names.
+- Preview downloads now target CrossOver Preview 20261111 (27.0.0.41303). Stable remains CrossOver 26.3.
+- Native Steam integration updated to NotProton 1.2.5, preserving graphics and synchronization settings.
+- Retains the Wine performance optimization on macOS 27.2.1.
 
 **0.1.0-alpha11 (7 November 2026)**
 
