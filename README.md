@@ -10,20 +10,20 @@ Choose one ZIP matching your CrossOver version and how you launch Steam.
 
 | Package | Version |
 | --- | --- |
-| CrossOver Preview 27.0.0.41303 — NotProton Steam native | 0.1.0-alpha12.3 |
-| CrossOver Preview 27.0.0.41303 — CrossOver Steam bottle | 0.1.0-alpha12.3 |
-| CrossOver 26.3 — NotProton Steam native | 0.1.0-alpha12.3 |
-| CrossOver 26.3 — CrossOver Steam bottle | 0.1.0-alpha12.3 |
+| CrossOver Preview 2026.11.11 — NotProton Steam native | 0.1.0-alpha12.4 |
+| CrossOver Preview 2026.11.11 — CrossOver Steam bottle | 0.1.0-alpha12.4 |
+| CrossOver 26.3 — NotProton Steam native | 0.1.0-alpha12.4 |
+| CrossOver 26.3 — CrossOver Steam bottle | 0.1.0-alpha12.4 |
 
 **Requirements:** Apple Silicon, macOS 27.x, Rosetta, the matching CrossOver
-version, and a Steam copy of THE FINALS. **macOS 27.2 or 27.2.1 is required to use the improved Wine performance optimization.** Native Steam also requires NotProton 1.2.5.
-For Preview, download `crossover-preview-20261111.zip` from CodeWeavers' Preview Center (not the `arm64` one).
+version, and a Steam copy of THE FINALS. **macOS 27.2 or 27.2.1 is required to use the improved Wine performance optimization.** Native Steam also requires NotProton 1.2.6.
+For Preview, choose **X86 / Rosetta**: `crossover-preview-20261111.zip` from CodeWeavers' Preview Center, even on Apple Silicon. Do not use the `arm64` archive.
 
 Extract the whole ZIP, open `Install.command`, and choose **Install / update**.
 The CPU compatibility correction and S12 skin correction are included in that one installation.
 
 - **CrossOver Steam bottle:** launch **THE FINALS (Patched)** inside your selected bottle.
-- **NotProton Steam native:** restart Steam, select **THE FINALS - CrossOver 26.3** or **THE FINALS - CrossOver Preview 27.0.0.41303** as the compatibility tool, and click **Play**.
+- **NotProton Steam native:** restart Steam, select **THE FINALS - CrossOver 26.3** or **THE FINALS - CrossOver Preview 2026.11.11** as the compatibility tool, and click **Play**.
 
 The installer creates a private runtime and preserves your installed CrossOver app
 and game files. Verification and rollback are included.
@@ -40,8 +40,17 @@ ZIP checksums are in `SHA256SUMS.txt`.
 
 - **Shader-cache recovery:** for recurring graphics freezes, quit the game and try **5 — Clear D3DMetal shader cache** in `Install.command`. It rebuilds automatically; expect shader-compilation stutter.
 
+If macOS blocks `hostcheck`, use **System Settings → Privacy & Security → Open Anyway**, approve it, then rerun the installer.
+
 <details>
 <summary><strong>Changelog</strong></summary>
+
+**0.1.0-alpha12.4 (12 November 2026)**
+
+- Updates native Steam integration to NotProton 1.2.6, which restores graphics controls for custom compatibility tools.
+- Uses the Preview release date in download and Steam tool names.
+- Clarifies the required X86 / Rosetta Preview download and macOS approval steps.
+
 
 **0.1.0-alpha12.3 (12 November 2026)**
 
